@@ -194,10 +194,10 @@ body{font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;background:var(--c
     <div class="method-title">Scoring composite multi-fenêtres</div>
     <div class="method-sub">Validé par analyse de robustesse sur l'export du 30/04/2026 — corrélation 0,996 avec la méthode alternative (alpha + MDD comme composantes centrales). Les classements sont stables quelle que soit la pondération testée.</div>
     <div class="method-grid">
-      <div class="method-step"><div class="method-num">40%</div><div class="method-lbl">Sharpe 5 ans</div><div class="method-desc">Fenêtre principale. Capture un cycle complet incluant le choc 2022. Disponible sur 81 % des fonds.</div></div>
-      <div class="method-step"><div class="method-num">35%</div><div class="method-lbl">Sharpe 3 ans</div><div class="method-desc">Fenêtre récente. Corrélation de seulement 0,09 avec le Sharpe 5a — signal réellement complémentaire.</div></div>
-      <div class="method-step"><div class="method-num">15%</div><div class="method-lbl">Sharpe 8 ans</div><div class="method-desc">Longue durée. Valide la robustesse du gérant sur plusieurs cycles. Disponible sur 70 % des fonds.</div></div>
-      <div class="method-step"><div class="method-num">10%</div><div class="method-lbl">Sharpe 10 ans</div><div class="method-desc">Fonds établis uniquement. Pénalise implicitement les fonds récents insuffisamment testés.</div></div>
+      <div class="method-step"><div class="method-num">70%</div><div class="method-lbl">Sharpe multi-fenêtres</div><div class="method-desc">Sh5×40%+Sh3×35%+Sh8×15%+Sh10×10% — corrélation 0,09 entre 5a et 3a : signal véritablement indépendant.</div></div>
+      <div class="method-step"><div class="method-num">15%</div><div class="method-lbl">Alpha 5 ans</div><div class="method-desc">Compétence nette du gérant vs son indice. Corrélation 0,43 avec Sharpe — signal distinct et complémentaire.</div></div>
+      <div class="method-step"><div class="method-num">8%</div><div class="method-lbl">Skewness 5 ans</div><div class="method-desc">Asymétrie des rendements. Positif = bonnes surprises fréquentes. Négatif = crashs rares mais violents. Pénalise les fonds trompeurs.</div></div>
+      <div class="method-step"><div class="method-num">7%</div><div class="method-lbl">Kurtosis 5 ans</div><div class="method-desc">Épaisseur des queues de distribution. Kurtosis élevé = fonds "calme en apparence, explosif en réalité". Pénalisé. + Beta baissier ×10% pour les fonds actions.</div></div>
     </div>
     <div class="method-footer">
       <div class="mf-item"><div class="mf-dot"></div>Filtre liquidité : AUM minimum 15 M€</div>
