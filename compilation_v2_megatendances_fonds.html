@@ -7,43 +7,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-lt:#253d52;
-  --gold:#c9a84c;--gold-lt:#e8d08a;--gold-dk:#9a7209;
-  --cream:#f5f0e8;--cream-dk:#ede8df;
-  --slate:#5a6a7a;--slate-lt:#8a9aaa;
+  /* ─ HC Palette ─ */
+  --cream:#F0EDE8;--cream-dk:#E8E4DE;--cream-lt:#F8F6F2;
+  --blue:#8FAABE;--blue-mid:#7090A6;--blue-dk:#4E6E82;--blue-deep:#3A5568;
+  --charcoal:#3D3D3D;--charcoal-md:#5A5A5A;--charcoal-lt:#8A8A8A;--charcoal-xlt:#BABABA;
+  --white:#FDFBF8;--border:rgba(143,170,190,0.28);
+  /* ─ Compat aliases ─ */
+  --navy:#3D3D3D;--navy-mid:#F8F6F2;--navy-lt:#E8E4DE;
+  --gold:#8FAABE;--gold-lt:#dce9f0;--gold-dk:#4E6E82;
+  --slate:#5A5A5A;--slate-lt:#8A8A8A;
+  /* ─ Functional ─ */
   --green:#2d6a4f;--green-lt:#e8f5e9;--green-dk:#1b4332;
   --red:#c0392b;--red-lt:#fce4ec;
   --amber:#c77700;--amber-lt:#fff3e0;
-  --blue:#1565c0;--blue-lt:#e3f2fd;
-  --purple:#6a1b9a;--purple-lt:#f3e5f5;
-  --border:#d6cfc4;--white:#fff;
+  --purple:#5c4f8a;--purple-lt:#ede9fe;
+  /* ─ MT colors ─ */
   --mt1:#1565c0;--mt2:#c0392b;--mt3:#2d6a4f;--mt4:#9a7209;
   --mt5:#00695c;--mt6:#e65100;--mt7:#6a1b9a;--mt8:#37474f;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);font-size:12px;line-height:1.5;}
+body{font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;background:var(--cream);color:var(--charcoal);font-size:12px;line-height:1.5;}
 
-.hdr{background:var(--navy);color:#fff;padding:38px 52px 30px;position:relative;overflow:hidden;}
-.hdr::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent 60%);}
-.htag{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:600;}
+.hdr{background:var(--blue);color:#fff;padding:38px 52px 30px;position:relative;overflow:hidden;}
+.hdr::before{content:'';position:absolute;top:-80px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.06);}
+.htag{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:10px;font-weight:700;}
 .hdr h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;line-height:1.2;}
-.hdr h1 em{color:var(--gold);font-style:normal;}
+.hdr h1 em{color:rgba(255,255,255,0.75);font-style:italic;}
 .hsub{font-size:12px;color:rgba(255,255,255,0.5);margin-top:7px;max-width:720px;line-height:1.65;}
 .hmeta{display:flex;gap:22px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;}
 .mi{font-size:10px;color:rgba(255,255,255,0.38);}
 .mi strong{display:block;color:#fff;font-size:11px;margin-bottom:1px;}
 
-.tabs{background:var(--navy-mid);display:flex;overflow-x:auto;border-bottom:2px solid var(--gold);}
-.tab{padding:11px 16px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);cursor:pointer;white-space:nowrap;border:none;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.12s;}
-.tab:hover{color:rgba(255,255,255,0.8);}
-.tab.active{color:var(--gold-lt);border-bottom-color:var(--gold);}
+.tabs{background:var(--cream-lt);border-bottom:2px solid var(--blue);display:flex;overflow-x:auto;}
+.tab{padding:11px 16px;font-size:11px;font-weight:700;color:var(--charcoal-md);cursor:pointer;white-space:nowrap;border:none;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.12s;}
+.tab:hover{color:var(--charcoal);}
+.tab.active{color:var(--blue-deep);border-bottom-color:var(--blue);font-weight:700;}
 
 .panel{display:none;padding:28px 52px 56px;}
 .panel.active{display:block;}
 
-.sec-h2{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.sec-h2{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--charcoal);margin-bottom:4px;}
 .sec-sub{font-size:12px;color:var(--slate);max-width:720px;line-height:1.65;margin-bottom:20px;}
-.gold-rule{width:40px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:10px;}
+.gold-rule{width:40px;height:2px;background:linear-gradient(90deg,var(--blue),transparent);margin-bottom:10px;}
 
 /* MT section */
 .mt-legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;padding:12px 16px;background:var(--white);border:1px solid var(--border);border-radius:8px;}
@@ -61,7 +66,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);
 
 /* Fund table */
 .ftbl{width:100%;border-collapse:collapse;font-size:10.5px;border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;overflow:hidden;}
-.ftbl th{background:var(--navy);color:#fff;padding:7px 7px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.4px;font-weight:500;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.07);}
+.ftbl th{background:var(--blue);color:#fff;padding:7px 7px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.4px;font-weight:700;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.12);}
 .ftbl td{padding:7px 7px;border-bottom:1px solid var(--border);vertical-align:middle;border-right:1px solid rgba(0,0,0,0.02);}
 .ftbl tr:nth-child(even) td{background:#fafaf8;}
 .ftbl tr:hover td{background:#f0ece4;}
@@ -69,7 +74,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);
 
 /* Rank */
 .rk{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;font-size:9px;font-weight:700;}
-.rk1{background:var(--gold);color:var(--navy);}
+.rk1{background:var(--blue);color:#fff;}
 .rk2{background:#9ea8b3;color:#fff;}
 .rk3{background:#a0785a;color:#fff;}
 .rkn{background:#eee;color:var(--slate);font-size:8.5px;}
@@ -87,10 +92,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);
 .pos{color:#2d6a4f;font-weight:600;}.neg{color:#c0392b;}
 
 /* Fund name cell */
-.fn{font-weight:600;color:var(--navy);font-size:11px;line-height:1.3;}
-.fi{font-size:8.5px;font-family:'DM Mono',monospace;color:var(--slate-lt);}
+.fn{font-weight:700;color:var(--charcoal);font-size:11px;line-height:1.3;}
+.fi{font-size:8.5px;font-family:monospace;color:var(--slate-lt);}
 .fm{font-size:9px;color:var(--slate-lt);}
-.fstars{color:var(--gold);font-size:8.5px;}
+.fstars{color:var(--blue-dk);font-size:8.5px;}
 
 /* SFDR */
 .s8{font-size:8px;padding:1px 4px;border-radius:3px;background:#e3f2fd;color:#1565c0;}
@@ -110,19 +115,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);
 /* Controls */
 .controls{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:14px;padding:11px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;}
 .ctrl-lbl{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate);}
-input[type=text],select{font-family:'DM Sans',sans-serif;font-size:11px;padding:5px 9px;border:1px solid var(--border);border-radius:5px;background:var(--white);color:var(--navy);outline:none;}
+input[type=text],select{font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;font-size:11px;padding:5px 9px;border:1px solid var(--border);border-radius:5px;background:var(--white);color:var(--charcoal);outline:none;}
 input[type=text]:focus,select:focus{border-color:var(--gold);}
 #srch{width:190px;}
-.btn{font-family:'DM Sans',sans-serif;font-size:10px;padding:5px 11px;border-radius:5px;border:1px solid var(--border);background:var(--white);color:var(--slate);cursor:pointer;}
+.btn{font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;font-size:10px;padding:5px 11px;border-radius:5px;border:1px solid var(--border);background:var(--white);color:var(--slate);cursor:pointer;}
 .btn:hover{background:var(--cream-dk);}
 .cnt{margin-left:auto;font-size:10.5px;color:var(--slate);}
-.cnt strong{color:var(--navy);}
+.cnt strong{color:var(--charcoal);}
 
 /* Big table */
 .tbl-wrap{overflow-x:auto;}
 .big-table{width:100%;border-collapse:collapse;min-width:1350px;font-size:10.5px;}
 .big-table thead{position:sticky;top:0;z-index:5;}
-.big-table th{background:var(--navy);color:#fff;padding:7px 6px;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:0.4px;font-weight:500;white-space:nowrap;cursor:pointer;user-select:none;border-right:1px solid rgba(255,255,255,0.07);}
+.big-table th{background:var(--blue);color:#fff;padding:7px 6px;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:0.4px;font-weight:700;white-space:nowrap;cursor:pointer;user-select:none;border-right:1px solid rgba(255,255,255,0.07);}
 .big-table th:hover{background:var(--navy-lt);}
 .big-table th.sa::after{content:' ↑';}.big-table th.sd::after{content:' ↓';}
 .big-table th:not(.sa):not(.sd)::after{content:' ↕';opacity:0.25;}
@@ -135,8 +140,8 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
 
 /* ── ALLOC PANELS ── */
 .alloc-toggle{display:flex;gap:0;margin-bottom:24px;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-.alloc-btn{flex:1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;text-align:center;}
-.alloc-btn.active{background:var(--navy);color:#fff;}
+.alloc-btn{flex:1;padding:12px 16px;font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;text-align:center;}
+.alloc-btn.active{background:var(--blue);color:#fff;}
 .alloc-btn:not(.active){background:var(--white);color:var(--slate);}
 .alloc-btn:not(.active):hover{background:var(--cream-dk);}
 .alloc-panel{display:none;}
@@ -148,12 +153,12 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
 .donut-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin-bottom:14px;}
 .donut-svg{position:relative;width:160px;height:160px;}
 .donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
-.dc-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);line-height:1;}
+.dc-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--charcoal);line-height:1;}
 .dc-lbl{font-size:9px;color:var(--slate-lt);text-transform:uppercase;}
 .leg-list{margin-top:12px;width:100%;display:flex;flex-direction:column;gap:5px;}
 .leg-row{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--slate);}
 .leg-d{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
-.leg-pct{margin-left:auto;font-weight:700;font-size:11px;color:var(--navy);}
+.leg-pct{margin-left:auto;font-weight:700;font-size:11px;color:var(--charcoal);}
 
 /* Fund reco cards */
 .reco-section{margin-bottom:28px;}
@@ -162,12 +167,12 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
 .rs-alloc{font-size:22px;font-weight:700;color:#fff;font-family:'Playfair Display',serif;margin-left:auto;}
 
 .reco-table{width:100%;border-collapse:collapse;font-size:11px;border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;}
-.reco-table th{background:var(--navy);color:#fff;padding:7px 10px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.5px;font-weight:500;}
+.reco-table th{background:var(--blue);color:#fff;padding:7px 10px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.5px;font-weight:700;}
 .reco-table td{padding:10px 10px;border-bottom:1px solid var(--border);vertical-align:top;}
 .reco-table tr:nth-child(even) td{background:#fafaf8;}
 .reco-table tr:last-child td{border-bottom:none;}
 .rationale{font-size:11px;color:var(--slate);line-height:1.65;}
-.rationale strong{color:var(--navy);}
+.rationale strong{color:var(--charcoal);}
 .mt-pills{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px;}
 .mt-pill{font-size:8.5px;padding:2px 6px;border-radius:3px;font-weight:600;}
 .vivp-vi{display:inline-block;background:#e3f2fd;color:var(--blue);border-radius:3px;padding:1px 5px;font-weight:700;font-size:10px;}
@@ -176,7 +181,7 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
 /* Synth table */
 .synth-wrap{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:24px;}
 .synth-table{width:100%;border-collapse:collapse;font-size:11px;}
-.synth-table th{background:var(--navy);color:#fff;padding:8px 10px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.5px;font-weight:500;}
+.synth-table th{background:var(--blue);color:#fff;padding:8px 10px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:0.5px;font-weight:700;}
 .synth-table td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
 .synth-table tr:nth-child(even) td{background:#fafaf8;}
 .synth-table tr:last-child td{border-bottom:none;}
@@ -190,12 +195,29 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
 .al-info{background:var(--blue-lt);border-left:3px solid var(--blue);color:#0a3d7a;}
 
 .disclaimer{background:var(--cream-dk);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:10px;color:var(--slate);line-height:1.6;margin-top:28px;}
-.ftr{background:var(--navy);color:rgba(255,255,255,0.3);text-align:center;padding:10px;font-size:9px;}
+/* ─ ALERTE COLUMN ─ */
+.alert-cell{font-size:9.5px;line-height:1.5;padding:3px 0;}
+.alert-warn{color:#7a4800;background:var(--amber-lt);border-left:2px solid var(--amber);padding:3px 6px;border-radius:3px;margin-bottom:2px;}
+.alert-info{color:var(--blue-deep);background:rgba(143,170,190,0.1);border-left:2px solid var(--blue);padding:3px 6px;border-radius:3px;margin-bottom:2px;}
+th.alert-th{background:var(--blue-deep)!important;min-width:140px;font-weight:700;}
+
+.ftr{background:var(--blue-deep);color:rgba(255,255,255,0.3);text-align:center;padding:10px;font-size:9px;}
 .ftr em{color:var(--gold);}
 </style>
 </head>
 <body>
 
+<nav style="position:sticky;top:0;z-index:200;background:#F8F6F2;border-bottom:1px solid rgba(143,170,190,0.28);padding:0 52px;height:60px;display:flex;align-items:center;justify-content:space-between;" class="no-print">
+  <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
+    <svg width="36" height="36" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="9" fill="#8FAABE"/><text x="5" y="33" font-family="Gadugi,'Segoe UI',sans-serif" font-size="25" font-weight="700" fill="#F8F6F2" letter-spacing="-1">hc</text></svg>
+    <div><div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#5A5A5A;">HC Conseil &amp; Patrimoine</div><div style="font-family:'Playfair Display',serif;font-size:11.5px;font-style:italic;color:#4E6E82;">Cristalliance Avenir</div></div>
+  </a>
+  <div style="display:flex;gap:4px;">
+    <a href="megatendances_2026_2035.html" style="font-size:10.5px;font-weight:700;color:#5A5A5A;padding:5px 11px;border-radius:20px;text-decoration:none;">Mégatendances</a>
+    <a href="compilation_v2_megatendances_fonds.html" style="font-size:10.5px;font-weight:700;color:#fff;background:#8FAABE;padding:5px 11px;border-radius:20px;text-decoration:none;">Compilation fonds</a>
+    <a href="V3_strategie_vivp_cristalliance.html" style="font-size:10.5px;font-weight:700;color:#5A5A5A;padding:5px 11px;border-radius:20px;text-decoration:none;">Stratégie VI/VP</a>
+  </div>
+</nav>
 <div class="hdr">
   <div class="htag">Analyse Croisée Complète v2 · Cristalliance Avenir · Avril 2026</div>
   <h1>Compilation <em>Mégatendances × Fonds × Métriques</em></h1>
@@ -279,6 +301,7 @@ input[type=text]:focus,select:focus{border-color:var(--gold);}
   <div class="tbl-wrap">
     <table class="big-table" id="bigTbl">
       <thead><tr>
+        <th class="alert-th" style="min-width:140px">⚠ Alertes</th>
         <th style="min-width:165px" data-k="nom">Fonds</th>
         <th style="min-width:52px" data-k="full_score">Score<br>Complet</th>
         <th style="min-width:52px" data-k="quant_score">Score<br>Quant.</th>
@@ -365,6 +388,37 @@ var MT_META = {
 };
 
 function dsCls(v){var m={4:'ds4',3:'ds3',2:'ds2',1:'ds1',0:'ds0','-1':'dsm1','-2':'dsm2','-3':'dsm3','-4':'dsm4'};return m[String(v)]||'dsna';}
+// ══ ALERTES AUTOMATIQUES ══
+var ALERT_OVERRIDES = {
+  'LU2466448532': {type:'warn', msg:'Fonds jeune — historique 3a uniquement. Rang 12 flatteur car non comparable aux fonds scorés sur 5a. Plafonné 1 % du contrat. 100 % VP strict.'},
+  'FR0013533619': {type:'warn', msg:'PE infrequent — valorisations trimestrielles. Skewness 6,74 et kurtosis 49,52 non comparables aux OPCVM. Métriques Sharpe/DS non représentatives.'},
+  'FR0013301553': {type:'info', msg:'PE semi-liquide — Sharpe 3,10 non comparable aux OPCVM (valorisations infrequentes). Pertinent pour exposition PE diversifié, pas pour comparaison Sharpe.'},
+  'FR001400BCG0': {type:'info', msg:'Infra dette verte — Sharpe 3,36 non comparable (valorisations infrequentes PE/Infra). Rendement cashflow 20–30 ans. 100 % VI.'},
+  'LU1670707527': {type:'info', msg:'Seul fonds value Europe retenu — JPMF Europe Sust. et ODDO écartés (Sharpe dégradé). Justification qualitative : seule couverture de la prime value Zone Euro disponible dans l\'univers.'},
+  'FR0007390174': {type:'warn', msg:'Performance 2025 exceptionnelle non représentative du profil long terme. Fonds minier or : +119,7 % en 2025 vs +25,1 % annualisé 5a — conjoncturel (flambée or 2025). À relativiser.'},
+  'FR0010664086': {type:'warn', msg:'Performance 2025 exceptionnelle non représentative du profil long terme. Fonds or : +130,3 % en 2025 vs +26,9 % annualisé 5a — conjoncturel. À relativiser.'},
+  'LU0190161025': {type:'info', msg:'Pertinent MT5 Santé/Biotech — seul pur play biotech retenu. +61,5 % ann. 1a mais Sharpe 5a 0,09 : la 2025 biotech ne dure pas. 100 % VP strict.'},
+};
+function getAlerts(f){
+  var alerts=[];
+  // Override spécifique par ISIN
+  if(ALERT_OVERRIDES[f.isin]){
+    var ov=ALERT_OVERRIDES[f.isin];
+    return'<div class="alert-cell alert-'+ov.type+'">'+ov.msg+'</div>';
+  }
+  // Fonds minier/or conjoncturel : p25 > +40% ET p5a < +15%
+  var p25=parseFloat((f.p25||'').replace(',','.').replace('%','').replace('+',''));
+  var p5a=parseFloat((f.p5a||'').replace(',','.').replace('%','').replace('+',''));
+  if(!isNaN(p25)&&!isNaN(p5a)&&p25>40&&p5a<15){
+    alerts.push({type:'warn',msg:'Performance 2025 exceptionnelle non représentative du profil long terme (p25 > +40 %, p5a annualisé < +15 %).'});
+  }
+  // Fonds jeune
+  if(f.young&&!f.sh5||f.sh5==='n/d'){
+    alerts.push({type:'info',msg:'Fonds jeune — historique < 3a, données limitées.'});
+  }
+  if(!alerts.length)return'<span style="color:var(--charcoal-xlt);font-size:9px">—</span>';
+  return alerts.map(function(a){return'<div class="alert-cell alert-'+a.type+'">'+a.msg+'</div>';}).join('');
+}
 function dsBadge(v){
   if(v===null||v===undefined)return'<span class="ds dsna">—</span>';
   return'<span class="ds '+dsCls(v)+'">'+(v>0?'+'+v:String(v))+'</span>';
@@ -412,10 +466,11 @@ function switchAlloc(id,btn){
       h+='<div style="border:1px solid var(--border);border-top:none;padding:14px;color:var(--slate);border-radius:0 0 8px 8px;">Aucun fonds avec données suffisantes disponible pour ce thème dans l\'univers.</div>';
     } else {
       h+='<div style="overflow-x:auto"><table class="ftbl"><thead><tr>';
-      h+='<th>#</th><th style="min-width:175px">Fonds</th><th>Score</th><th>Sh 5a</th><th>Sh 3a</th><th>Sh 8a</th><th>Sortino 5a</th><th>DS 5a</th><th>DS 3a</th><th>Alpha 5a</th><th>Beta Baiss.</th><th>DnCapt 5a</th><th>Sk 5a</th><th>Ku 5a</th><th>MaxDD</th><th>2022</th><th>Pf 5a</th><th>Pf 1a</th><th>2025</th><th>Actif</th><th>SFDR</th><th>Anomalies</th>';
+      h+='<th class="alert-th">⚠ Alertes</th><th>#</th><th style="min-width:175px">Fonds</th><th>Score</th><th>Sh 5a</th><th>Sh 3a</th><th>Sh 8a</th><th>Sortino 5a</th><th>DS 5a</th><th>DS 3a</th><th>Alpha 5a</th><th>Beta Baiss.</th><th>DnCapt 5a</th><th>Sk 5a</th><th>Ku 5a</th><th>MaxDD</th><th>2022</th><th>Pf 5a</th><th>Pf 1a</th><th>2025</th><th>Actif</th><th>SFDR</th><th>Anomalies</th>';
       h+='</tr></thead><tbody>';
       funds.forEach(function(r,i){
         h+='<tr>';
+        h+='<td style="vertical-align:top;min-width:140px">'+getAlerts(r)+'</td>';
         h+='<td>'+rankB(i)+'</td>';
         h+='<td><div class="fn">'+r.nom+youngB(r.young)+'</div><div class="fi">'+r.isin+'</div><div class="fm">'+r.mgr+'</div><div class="fstars">'+stars(r.stars)+'</div></td>';
         h+='<td style="text-align:center;font-weight:700">'+r.full_score+'</td>';
@@ -483,6 +538,7 @@ function applyF2(){
     rows.push('<tr class="cat-sep-r"><td colspan="23">📂 '+cat+' — '+bycat[cat].length+' fonds</td></tr>');
     bycat[cat].forEach(function(r){
       rows.push('<tr>'+
+        '<td style="vertical-align:top;min-width:140px">'+getAlerts(r)+'</td>'+
         '<td><div class="fn">'+r.nom+youngB(r.young)+'</div><div class="fi">'+r.isin+'</div><div class="fm">'+r.mgr+'</div><div class="fstars">'+stars(r.stars)+'</div></td>'+
         '<td style="text-align:center;font-weight:700">'+r.full_score+'</td>'+
         '<td style="text-align:center">'+r.quant_score+'</td>'+
@@ -704,7 +760,7 @@ function buildAllocSection(alloc, container){
   });
   
   // Synth
-  h+='<div style="font-family:Playfair Display,serif;font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 12px">Tableau de Synthèse</div>';
+  h+='<div style="font-family:Playfair Display,serif;font-size:17px;font-weight:700;color:var(--charcoal);margin:24px 0 12px">Tableau de Synthèse</div>';
   h+='<div class="synth-wrap"><table class="synth-table"><thead><tr>';
   h+='<th>Poche</th><th>Fonds</th><th>%</th><th>Sh 5a</th><th>DS 5a</th><th>Alpha 5a</th><th>2022</th><th>Mégatendances</th><th>VI / VP</th></tr></thead><tbody>';
   var tot=0;
@@ -724,7 +780,7 @@ function buildAllocSection(alloc, container){
       h+='</tr>';
     });
   });
-  h+='<tr class="total-row"><td colspan="2">TOTAL UC (hors fonds euro + Exceltis)</td><td style="text-align:center;font-size:15px;color:var(--navy)">'+tot+'%</td><td colspan="6" style="font-size:11px;color:var(--slate);font-weight:400">= 45% des 100% du portefeuille · Socle fixe : fonds euro 20% + Exceltis 35%</td></tr>';
+  h+='<tr class="total-row"><td colspan="2">TOTAL UC (hors fonds euro + Exceltis)</td><td style="text-align:center;font-size:15px;color:var(--charcoal)">'+tot+'%</td><td colspan="6" style="font-size:11px;color:var(--slate);font-weight:400">= 45% des 100% du portefeuille · Socle fixe : fonds euro 20% + Exceltis 35%</td></tr>';
   h+='</tbody></table></div>';
   container.innerHTML=h;
 }
