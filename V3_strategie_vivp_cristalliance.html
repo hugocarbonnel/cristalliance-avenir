@@ -706,10 +706,13 @@ function renderBlocsVIVP(a,sel_act,sel_dec,sel_dat,sel_pe,VI,VP,vi_net,vp_net,du
 
   selAllEquity.forEach(function(f){
     var vpct=f.mode==='vi'?100:(f.mode==='mix'?(f.vi_pct||50):0);
-    if(vpct===0)return; // 100% VP : pas dans VI
-    var viAmt=r2(equityPerFund*vpct/100);
-    if(viAmt<1)return;
-    var lbl=f.nom.split(' ').slice(0,3).join(' ')+(f.mode==='mix'?' (VI '+vpct+' %)':'');
+    // Si VP/fonds < 25€ : ouverture VI à 25€ min pour TOUS les fonds actions (y compris 100% VP)
+    if(vpct===0&&vp_per_fund>=25)return; // 100% VP et VP suffisant : pas besoin de VI
+    var viAmt=vpct>0?r2(equityPerFund*vpct/100):0;
+    var viAmt=Math.max(viAmt,25); // minimum 25€ par ligne d'ouverture
+    var lbl=f.nom.split(' ').slice(0,3).join(' ');
+    if(f.mode==='mix')lbl+=' (VI '+vpct+' %)';
+    if(f.mode==='vp')lbl+=' (ouverture 25 € min)';
     POCHE_VI.push({col:MT_C[f.mt]||C.act,lc:L.act,name:lbl,amt:viAmt});
   });
 
@@ -765,7 +768,7 @@ function renderBlocsVIVP(a,sel_act,sel_dec,sel_dat,sel_pe,VI,VP,vi_net,vp_net,du
         h+='<span class="bp-amt">'+fmt(vp_act_net)+'/mois</span>';
         h+='<span class="bp-pct">30 %</span></div>';
         if(vp_per_fund<25){
-          h+='<div style="font-size:9px;color:var(--amber);padding:4px 0">⚠ VP/fonds action &lt; 25 € — ouverture VI requise pour ces fonds</div>';
+          h+='<div style="font-size:9px;color:var(--amber);padding:4px 0">⚠ VP/fonds action &lt; 25 € — ouverture VI à 25 € min. requise pour ces fonds</div>';
         }
       } else {
         h+='<div class="bloc-na" style="font-size:10px">30 % réservé aux fonds actions VP<br>Sélectionner des fonds VP ou mix</div>';
