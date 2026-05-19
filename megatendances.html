@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mégatendances 2026–2035 · Analyse Stratégique · Cristalliance Avenir</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ─ HC Palette ─ */
+  --cream:#F0EDE8; --cream-dk:#E8E4DE; --cream-lg:#FDFBF8;
+  --blue:#8FAABE; --blue-mid:#7090A6; --blue-dk:#4E6E82; --blue-deep:#3A5568;
+  --charcoal:#3D3D3D; --charcoal-md:#5A5A5A; --charcoal-lt:#8A8A8A; --charcoal-xlt:#BABABA;
+  --white:#FDFBF8; --border:rgba(143,170,190,0.28);
+  /* ─ Compat aliases ─ */
+  --navy:#3D3D3D; --navy-mid:#F8F6F2; --navy-lt:#E8E4DE; --navy-pale:#E0DDD8;
+  --gold:#8FAABE; --gold-lt:#dce9f0; --gold-dk:#4E6E82; --gold-pale:#F0EDE8;
+  --slate:#5A5A5A; --slate-lt:#8A8A8A; --slate-pale:#BABABA;
+  --green:#2d6a4f; --green-lt:#e8f5e9; --green-dk:#1b4332; --green-mid:#4caf50;
+  --red:#c0392b; --red-lt:#fce4ec; --red-mid:#e53935;
+  --amber:#c77700; --amber-lt:#fff3e0; --amber-mid:#ff8f00;
+  --purple:#5c4f8a; --purple-lt:#ede9fe;
+  --teal:#00695c; --teal-lt:#e0f2f1;
+  --orange:#e65100; --orange-lt:#fff3e0;
+  --blue-lt:#dce9f0;
+
+  /* Trend colors */
+  --t1:#1565c0;   /* IA */
+  --t2:#c0392b;   /* Réarmement */
+  --t3:#2d6a4f;   /* Énergie */
+  --t4:#6a1b9a;   /* Démographie */
+  --t5:#c77700;   /* Dollar/Or */
+  --t6:#00695c;   /* Santé/Biotech */
+  --t7:#e65100;   /* Reshoring */
+  --t8:#37474f;   /* Spatial/Défense tech */
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Gadugi','Segoe UI',Tahoma,Geneva,sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.65;}
+
+/* ─── HEADER ─── */
+.hdr{
+  background:var(--blue);
+  position:relative;overflow:hidden;
+  padding:56px 64px 44px;
+}
+.hdr-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 600px 400px at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 10% 80%, rgba(21,101,192,0.08) 0%, transparent 60%);
+}
+.hdr-line{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,rgba(255,255,255,0.3),transparent 60%);}
+.hdr-content{position:relative;z-index:1;}
+.htag{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:14px;font-weight:600;}
+.hdr h1{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;line-height:1.1;color:#fff;max-width:700px;}
+.hdr h1 em{color:rgba(255,255,255,0.75);font-style:italic;}
+.hdr-lead{font-size:14px;color:rgba(255,255,255,0.55);margin-top:14px;max-width:680px;line-height:1.7;}
+.hdr-meta{display:flex;gap:32px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;}
+.hm{font-size:10.5px;color:rgba(255,255,255,0.38);}
+.hm strong{display:block;color:#fff;font-size:12.5px;margin-bottom:2px;}
+
+/* ─── HORIZONS STRIP ─── */
+.horizons{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);}
+.hz{padding:18px 32px;display:flex;gap:14px;align-items:center;}
+.hz:first-child{border-right:1px solid var(--border);background:var(--white);}
+.hz:last-child{background:var(--cream-lg);}
+.hz-icon{font-size:24px;flex-shrink:0;}
+.hz-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--slate-lt);font-weight:600;margin-bottom:3px;}
+.hz-range{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--navy);}
+.hz-desc{font-size:11.5px;color:var(--slate);}
+
+/* ─── MAIN ─── */
+.main{padding:48px 64px 80px;}
+
+/* ─── SECTION HEADERS ─── */
+.section{margin-bottom:64px;}
+.section-intro{margin-bottom:32px;}
+.hz-label{display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+.hz-ct{background:var(--blue-lt);color:var(--blue);}
+.hz-mt{background:var(--green-lt);color:var(--green);}
+.hz-both{background:var(--amber-lt);color:var(--amber);}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.section-sub{font-size:13px;color:var(--slate);max-width:760px;line-height:1.7;}
+.gold-rule{width:48px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:14px;}
+
+/* ─── MEGA TREND CARD ─── */
+.trend-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:28px;
+  box-shadow:0 2px 12px rgba(13,27,42,0.05);
+  position:relative;
+}
+.tc-accent{height:4px;width:100%;}
+.tc-header{padding:24px 28px 20px;display:flex;gap:18px;align-items:flex-start;border-bottom:1px solid var(--border);}
+.tc-icon{font-size:32px;flex-shrink:0;margin-top:2px;}
+.tc-title-block{flex:1;}
+.tc-number{font-family:monospace;font-size:10px;letter-spacing:2px;color:var(--slate-lt);margin-bottom:4px;}
+.tc-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);line-height:1.2;}
+.tc-subtitle{font-size:12.5px;color:var(--slate);margin-top:4px;}
+.tc-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.badge{font-size:9.5px;padding:2px 8px;border-radius:10px;font-weight:600;border:1px solid transparent;}
+.bct{background:var(--blue-lt);color:var(--blue);border-color:#bbdefb;}
+.bmt{background:var(--green-lt);color:var(--green);border-color:#c8e6c9;}
+.bhigh{background:#fce4ec;color:#c0392b;border-color:#f48fb1;}
+.bmed{background:#fff8e1;color:#c77700;border-color:#ffe082;}
+.blow{background:#f5f5f5;color:#555;border-color:#ddd;}
+.boppo{background:var(--gold-pale);color:var(--gold-dk);border-color:#e8d08a;}
+.tc-score{text-align:right;flex-shrink:0;}
+.ts-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--slate-lt);margin-bottom:4px;}
+.ts-val{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;line-height:1;}
+.ts-sub{font-size:10px;color:var(--slate-lt);margin-top:2px;}
+
+/* ─── TC BODY ─── */
+.tc-body{display:grid;grid-template-columns:1.6fr 1fr;border-bottom:1px solid var(--border);}
+.tc-left{padding:20px 24px;border-right:1px solid var(--border);}
+.tc-right{padding:20px 24px;}
+.tc-section-lbl{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--gold-dk);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tc-section-lbl::before{content:'';width:12px;height:1px;background:var(--gold);}
+.tc-text{font-size:12.5px;color:var(--slate);line-height:1.75;}
+.tc-text strong{color:var(--navy);}
+.tc-text p{margin-bottom:8px;}
+.tc-text p:last-child{margin-bottom:0;}
+
+/* ─── SIGNAL BARS ─── */
+.signal-grid{display:flex;flex-direction:column;gap:10px;}
+.signal-item{display:flex;align-items:center;gap:10px;}
+.signal-label{font-size:11px;color:var(--slate);min-width:110px;flex-shrink:0;}
+.signal-bar-wrap{flex:1;height:6px;background:#eee;border-radius:3px;overflow:hidden;}
+.signal-bar{height:100%;border-radius:3px;}
+.signal-val{font-size:10.5px;font-weight:700;min-width:30px;text-align:right;}
+
+/* ─── TIMELINE ─── */
+.timeline{display:flex;gap:0;margin-top:14px;}
+.tl-item{flex:1;border-right:1px solid var(--border);padding:10px 12px;}
+.tl-item:last-child{border-right:none;}
+.tl-period{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--slate-lt);margin-bottom:4px;}
+.tl-text{font-size:11px;color:var(--slate);line-height:1.5;}
+.tl-text strong{color:var(--navy);}
+
+/* ─── RISKS ─── */
+.risk-list{display:flex;flex-direction:column;gap:6px;margin-top:4px;}
+.risk-item{display:flex;gap:8px;font-size:11.5px;color:var(--slate);line-height:1.5;}
+.risk-icon{font-size:12px;flex-shrink:0;margin-top:1px;}
+.risk-item strong{color:var(--navy);}
+
+/* ─── INVESTABLE ANGLE ─── */
+.tc-invest{padding:14px 24px;background:#fafaf8;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.inv-title{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--gold-dk);margin-bottom:8px;grid-column:1/-1;}
+.inv-col{display:flex;flex-direction:column;gap:5px;}
+.inv-col-title{font-size:10px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.inv-tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:3px 8px;border-radius:6px;font-weight:500;}
+
+/* ─── CONVICTION MATRIX ─── */
+.matrix-wrap{margin-top:0;}
+.matrix-table{width:100%;border-collapse:collapse;font-size:11.5px;}
+.matrix-table th{background:var(--blue);color:#fff;padding:9px 12px;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:0.8px;font-weight:500;}
+.matrix-table td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:nth-child(even) td{background:#fafaf8;}
+.matrix-table tr:hover td{background:#f0ece4;}
+.conv-badge{display:inline-block;width:56px;text-align:center;padding:2px 0;border-radius:4px;font-size:10px;font-weight:700;}
+.conv-h{background:#1b4332;color:#fff;}
+.conv-m{background:#c77700;color:#fff;}
+.conv-l{background:#8a9aaa;color:#fff;}
+.horiz-short{background:#e3f2fd;color:#1565c0;font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;}
+.horiz-long{background:#e8f5e9;color:#2d6a4f;font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;}
+.horiz-both2{background:#fff8e1;color:#c77700;font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;}
+
+/* ─── RISK RADAR ─── */
+.risk-radar{background:var(--navy-mid);border-radius:14px;padding:24px 28px;margin-top:0;}
+.rr-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold-lt);margin-bottom:16px;}
+.rr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.rr-item{background:rgba(255,255,255,0.06);border-radius:10px;padding:14px;}
+.rr-item-title{font-size:11px;font-weight:600;color:rgba(255,255,255,0.9);margin-bottom:6px;}
+.rr-item-body{font-size:11px;color:rgba(255,255,255,0.6);line-height:1.6;}
+.rr-level{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9.5px;font-weight:700;margin-bottom:5px;}
+.rrl-h{background:#c0392b;color:#fff;}
+.rrl-m{background:#c77700;color:#fff;}
+.rrl-l{background:#2d6a4f;color:#fff;}
+
+/* ─── PORTFOLIO IMPLICATIONS ─── */
+.impl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:0;}
+.impl-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(13,27,42,0.04);}
+.impl-icon{font-size:22px;margin-bottom:8px;}
+.impl-title{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.impl-body{font-size:11px;color:var(--slate);line-height:1.65;}
+.impl-body strong{color:var(--navy);}
+
+/* ─── CONCLUSION ─── */
+.conclusion{background:var(--navy);color:#fff;border-radius:16px;padding:32px 36px;margin-top:0;}
+.cc-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-lt);margin-bottom:16px;}
+.cc-body{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.8;}
+.cc-body strong{color:#fff;}
+.cc-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;}
+.cc-point{background:rgba(255,255,255,0.06);border-radius:10px;padding:14px;border-left:3px solid var(--gold);}
+.cc-point-title{font-size:11px;font-weight:700;color:var(--gold-lt);margin-bottom:5px;}
+.cc-point-body{font-size:11px;color:rgba(255,255,255,0.65);line-height:1.6;}
+
+/* ─── DISCLAIMER ─── */
+.disclaimer{background:var(--cream-dk);border:1px solid var(--border);border-radius:10px;padding:16px 20px;font-size:10.5px;color:var(--slate);line-height:1.65;margin-top:40px;}
+.disclaimer strong{color:var(--navy);}
+
+/* ─── FOOTER ─── */
+.ftr{background:var(--navy);color:rgba(255,255,255,0.3);text-align:center;padding:14px;font-size:10px;}
+.ftr em{color:var(--gold);}
+
+/* ─── DIVIDER ─── */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:48px 0;}
+
+/* ─── Connector lines between cards ─── */
+.trend-connector{display:flex;justify-content:center;margin:-6px 0 4px;opacity:0.2;}
+.trend-connector::before{content:'';width:2px;height:20px;background:var(--border);}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;z-index:200;background:#F8F6F2;border-bottom:1px solid rgba(143,170,190,0.35);padding:0 48px;height:56px;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;">
+    <svg width="34" height="34" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="9" fill="#8FAABE"/><text x="5" y="33" font-family="Gadugi,'Segoe UI',sans-serif" font-size="25" font-weight="700" fill="#F8F6F2" letter-spacing="-1">hc</text></svg>
+    <div>
+      <div style="font-size:9.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#5A5A5A;">HC Conseil &amp; Patrimoine</div>
+      <div style="font-family:'Playfair Display',serif;font-size:11px;font-style:italic;color:#4E6E82;">Cristalliance Avenir</div>
+    </div>
+  </a>
+  <div style="display:flex;gap:3px;">
+    <a href="megatendances.html" style="font-size:10.5px;font-weight:700;padding:5px 13px;border-radius:20px;text-decoration:none;color:#fff;background:#8FAABE;">Mégatendances</a>
+    <a href="compilation.html" style="font-size:10.5px;font-weight:700;padding:5px 13px;border-radius:20px;text-decoration:none;color:#5A5A5A;">Compilation fonds</a>
+    <a href="strategie.html" style="font-size:10.5px;font-weight:700;padding:5px 13px;border-radius:20px;text-decoration:none;color:#5A5A5A;">Allocation d'actifs — VI/VP</a>
+  </div>
+</nav>
+
+<!-- ─── HEADER ─── -->
+<div class="hdr">
+  <div class="hdr-bg"></div>
+  <div class="hdr-line"></div>
+  <div class="hdr-content">
+    <div class="htag">Analyse Stratégique · Conseil en Gestion de Patrimoine · Avril 2026</div>
+    <h1>Mégatendances<br><em>2026 – 2035</em></h1>
+    <p class="hdr-lead">Analyse factuelle des forces structurelles qui redefiniront l'économie mondiale sur les deux prochaines décennies — avec leur impact sur les marchés financiers, les classes d'actifs et les choix d'allocation pour un profil équilibré/dynamique.</p>
+    <div class="hdr-meta">
+      <div class="hm"><strong>Court terme</strong>2026 – 2028 · 3 ans</div>
+      <div class="hm"><strong>Moyen terme</strong>2028 – 2035 · 7 ans</div>
+      <div class="hm"><strong>8 mégatendances</strong>Analysées sur 5 dimensions</div>
+      <div class="hm"><strong>Conviction</strong>Haute / Moyenne / Faible</div>
+      <div class="hm"><strong>Application</strong>Cristalliance Avenir · Profil Éq./Dyn.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HORIZONS ─── -->
+<div class="horizons">
+  <div class="hz">
+    <div class="hz-icon">⚡</div>
+    <div>
+      <div class="hz-title">Horizon court terme</div>
+      <div class="hz-range">2026 – 2028</div>
+      <div class="hz-desc">Forces déjà à l'œuvre, catalyseurs identifiables, visibilité élevée sur les bénéficiaires sectoriels</div>
+    </div>
+  </div>
+  <div class="hz">
+    <div class="hz-icon">🌐</div>
+    <div>
+      <div class="hz-title">Horizon moyen terme</div>
+      <div class="hz-range">2028 – 2035</div>
+      <div class="hz-desc">Tendances structurelles à conviction, scénarios multiples, rôle de l'allocation stratégique long terme</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════════════════════════════════════════
+     MÉGATENDANCE 1 — IA DÉPLOYÉE
+══════════════════════════════════════════════ -->
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-both">⚡🌐 Court + Moyen terme</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Mégatendances Technologiques</div>
+  <div class="section-sub">L'IA, le spatial et la cybersécurité — trois vagues technologiques dont la première est déjà amorcée, les deux suivantes en préparation. La distinction entre vague 1 (infrastructure) et vague 2 (applicatif) est déterminante pour l'allocation.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t1),#42a5f5);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🧠</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 01</div>
+      <div class="tc-title">Intelligence Artificielle — La Deuxième Vague</div>
+      <div class="tc-subtitle">Passage de l'infrastructure au déploiement applicatif · Gains de productivité réels · Disruption sectorielle</div>
+      <div class="tc-badges">
+        <span class="badge bct">Court terme</span>
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bhigh">Conviction haute</span>
+        <span class="badge boppo">Opportunité majeure</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t1);">9/10</div>
+      <div class="ts-sub">Impact économique</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>La première vague (2022–2025) est terminée.</strong> Elle a enrichi les fabricants d'infrastructure : NVIDIA, TSMC, les hyperscalers (Microsoft, Google, Amazon, Meta). Les valorisations de ces acteurs intègrent déjà 3 à 5 ans de croissance future — le potentiel de re-rating est limité.</p>
+        <p><strong>La deuxième vague (2026–2030) est en cours d'amorçage.</strong> Elle concerne les <em>déployeurs</em> : les entreprises de tous secteurs qui intègrent l'IA dans leurs processus et en tirent des gains de productivité mesurables. Cette vague est beaucoup plus large géographiquement et sectorellement que la première.</p>
+        <p><strong>Secteurs bénéficiaires de la deuxième vague :</strong> Santé (drug discovery par IA — réduction de 40–60 % du temps de R&D), services financiers (automatisation du risque, trading algorithmique, compliance), industrie et logistique (robotique, maintenance prédictive, qualité), services professionnels (cabinets d'audit, cabinets juridiques, consulting).</p>
+        <p><strong>Risque majeur court terme :</strong> Les tarifs douaniers Trump (avril 2026) frappent les chaînes de production technologiques (TSMC Taiwan, assemblage Chine) et compriment les marges des grandes caps tech US. Ce choc est temporaire mais douloureux à 12–18 mois.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Intensité du signal</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Maturité technologique</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--t1);"></div></div>
+          <div class="signal-val" style="color:var(--t1);">85 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Adoption entreprises</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:45%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">45 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Impact productivité mesuré</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:30%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">30 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Soutien réglementaire EU</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:60%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">60 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Risque disruption emploi</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:70%;background:var(--red);"></div></div>
+          <div class="signal-val" style="color:var(--red);">70 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Bulle applicative :</strong> beaucoup de promesses, peu de ROI mesuré à ce stade. Le cycle 2023–2025 ressemble aux valorisations internet 1999.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Régulation EU :</strong> l'AI Act européen peut freiner l'adoption dans les secteurs sensibles (santé, finance, RH).</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Concentration US :</strong> les modèles frontière restent contrôlés par 4–5 acteurs américains — risque géopolitique si les sanctions s'élargissent.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">2026 – 2027</div>
+      <div class="tl-text"><strong>Consolidation infra</strong> · Choc tarifaire Trump → correction des mega-caps tech US · Les déployeurs commencent à afficher des gains de productivité mesurables</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2027 – 2029</div>
+      <div class="tl-text"><strong>Déploiement massif</strong> · IA agents autonomes dans l'entreprise · Drug discovery premiers médicaments IA en phase 3 · Robotique industrielle accélère</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2029 – 2035</div>
+      <div class="tl-text"><strong>Re-rating économique</strong> · Gains de productivité de 1–2 %/an intégrés dans la croissance mondiale · AGI débat : ni catastrophe ni nirvana</div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement identifiés dans l'univers Cristalliance</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Exposition directe</div>
+      <span class="inv-tag" style="background:#e3f2fd;color:#1565c0;">🌐 Fidelity Global Technology Fund — infra tech diversifiée</span>
+      <span class="inv-tag" style="background:#e3f2fd;color:#1565c0;">💡 EdR Big Data A EUR — applicatif data/IA (DS5 +3)</span>
+      <span class="inv-tag" style="background:#e3f2fd;color:#1565c0;">🤖 Carmignac Ptf Tech Solutions — IA pure play récent</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Exposition indirecte</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🏥 Pictet Biotech — drug discovery IA</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🔒 Fonds cybersécurité — surface d'attaque IA × cyber</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🌍 Groupama Disruption — disruption monde (si conviction CT)</span>
+    </div>
+  </div>
+</div>
+
+<!-- TREND 2 : REARMEMENT -->
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t2),#ef5350);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🛡️</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 02</div>
+      <div class="tc-title">Réarmement Européen & Réindustrialisation</div>
+      <div class="tc-subtitle">Le thème le plus prévisible à 10 ans · Catalyseur de carnets de commandes pluriannuels · Révolution industrielle européenne</div>
+      <div class="tc-badges">
+        <span class="badge bct">Court terme</span>
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bhigh">Conviction très haute</span>
+        <span class="badge boppo">Thème dominant 2026–2035</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t2);">10/10</div>
+      <div class="ts-sub">Soutien politique bipartisan</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>Ce n'est pas un thème cyclique — c'est un changement de paradigme géopolitique.</strong> Depuis l'invasion de l'Ukraine (2022) et l'élection de Trump (2024–2025), les pays européens ont voté des augmentations historiques de leurs budgets défense. L'Allemagne a abandonné le "Schuldenbremse" (frein à l'endettement) pour financer 100 Md€ de dépenses défense. La France porte son budget à 2,5 % du PIB d'ici 2027. La Pologne, les Pays baltes et les pays nordiques visent 3–4 %.</p>
+        <p><strong>Chiffres concrets :</strong> Le budget défense agrégé de l'UE passera d'environ 240 Md€/an (2022) à plus de 400 Md€/an d'ici 2028. C'est un doublement en 6 ans de la demande adressée à l'industrie de défense — dans un secteur où les capacités de production se mesurent en décennies. Rheinmetall a 7 ans de carnet de commandes. Saab ne peut pas produire assez vite de missiles. BAE Systems tourne à pleine capacité.</p>
+        <p><strong>La réindustrialisation est le corollaire :</strong> souveraineté sur les semiconducteurs (CHIPS Act EU), les médicaments, les matières premières critiques (lithium, terres rares), la nourriture. Ce mouvement génère des investissements en capital fixe qui bénéficient directement aux valeurs industrielles, matériaux et utilities — le cœur du style value européen.</p>
+        <p><strong>Bénéficiaires géographiques :</strong> Allemagne (Rheinmetall, KNDS), France (Thales, Safran, Airbus), Royaume-Uni (BAE Systems, Rolls-Royce), Italie (Leonardo), Suède (Saab), Norvège (Kongsberg).</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Intensité du signal</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Votes budgétaires</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:95%;background:var(--t2);"></div></div>
+          <div class="signal-val" style="color:var(--t2);">95 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Carnets de commandes</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:90%;background:var(--t2);"></div></div>
+          <div class="signal-val" style="color:var(--t2);">90 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Consensus politique EU</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:88%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">88 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Capex industriel en cours</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:75%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">75 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Risque paix Ukraine</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:25%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">25 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Paix soudaine :</strong> un accord Ukraine-Russie réduirait la pression mais ne renverserait pas la tendance — les engagements NATO sont structurels.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Inflation réarmement :</strong> les dépenses massives peuvent alimenter l'inflation, forçant la BCE à relever les taux — coût du capital pour l'industrie.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Valorisations déjà élevées :</strong> Rheinmetall +700 % depuis 2022 — une partie du thème est déjà intégrée dans les cours.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">2026 – 2027</div>
+      <div class="tl-text"><strong>Montée en puissance</strong> · Livraisons des commandes 2023–2025 · Nouvelles commandes à record · Premières usines de munitions inaugurées</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2027 – 2030</div>
+      <div class="tl-text"><strong>Capacités industrielles</strong> · Nouvelles lignes de production opérationnelles · Programme IRIS² satellites défense · 2ème génération de drones européens</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2030 – 2035</div>
+      <div class="tl-text"><strong>Autonomie stratégique</strong> · Europe productrice nette de matériel défense · SCAF (char européen) · Souveraineté semiconducteurs</div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement identifiés dans l'univers Cristalliance</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Exposition directe</div>
+      <span class="inv-tag" style="background:#fce4ec;color:#c0392b;">🛡️ M&G European Strategic Value — deep value EU (industrie défense)</span>
+      <span class="inv-tag" style="background:#fce4ec;color:#c0392b;">🎯 CPR Invest European Strategic Autonomy — thème pur</span>
+      <span class="inv-tag" style="background:#fce4ec;color:#c0392b;">🇸🇪 JPMF Europe Sustainable — UK/Suisse (BAE, Rolls)</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Exposition complémentaire</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">📡 Echiquier Space B — spatial/défense (satellite, IRIS²)</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🏗️ DNCA Value Europe B — réindustrialisation value concentré</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">⚡ Infrastructure verte — duaux civils/militaires</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — MACRO & MONÉTAIRE
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-ct">⚡ Priorité court terme</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Macro-économique & Monétaire</div>
+  <div class="section-sub">Le dollar sous pression, l'or comme valeur refuge systémique, et la fin d'une ère de taux ultra-bas qui ne reviendra pas. Ces trois forces reconfigurent l'architecture de tout portefeuille sur horizon 10 ans.</div>
+</div>
+
+<!-- TREND 3 : DOLLAR & OR -->
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t5),#ffd54f);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🪙</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 03</div>
+      <div class="tc-title">Dédollarisation Progressive & Or Systémique</div>
+      <div class="tc-subtitle">Érosion lente du dollar comme réserve unique · Or comme actif de réserve souverain · Matières premières industrielles</div>
+      <div class="tc-badges">
+        <span class="badge bct">Court terme</span>
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bmed">Conviction moyenne</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t5);">7/10</div>
+      <div class="ts-sub">Tendance lente, non linéaire</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>La dédollarisation n'est pas un effondrement — c'est une érosion lente.</strong> La part du dollar dans les réserves mondiales est passée de 72 % (2000) à 58 % (2026). Ce mouvement prend des décennies. Il n'y a pas d'alternative crédible à court terme : ni l'euro, ni le yuan, ni les cryptos ne peuvent remplir le rôle du dollar comme monnaie de commerce mondial.</p>
+        <p><strong>Ce qui est en train de changer :</strong> les banques centrales émergentes (Chine, Inde, Golfe, Russie) réduisent leur part dollar au profit de l'or physique depuis 2022. Les achats d'or par les banques centrales ont atteint 1 100 tonnes en 2024 — un record historique, 4× la moyenne 2010–2019. Ce n'est pas spéculatif : c'est un rééquilibrage stratégique de réserves.</p>
+        <p><strong>L'or a déjà intégré une grande partie de ce mouvement</strong> (+130 % sur les minières en 2025). La question n'est pas "faut-il acheter de l'or" mais "quelle exposition résiduelle est justifiée". La réponse : une <em>couverture structurelle</em> (10–15 % d'un portefeuille), non un pari tactique sur le prix spot.</p>
+        <p><strong>Matières premières industrielles :</strong> le cuivre, le lithium et les terres rares sont les "pétroles" de la réindustrialisation et de la transition énergétique. Offre structurellement contrainte (mines = 10–15 ans de délai), demande en accélération. Le cuivre est le métal le plus directement exposé à l'électrification.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Achats or BC émergentes</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:90%;background:var(--t5);"></div></div>
+          <div class="signal-val" style="color:var(--t5);">90 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Déficit commercial US</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:80%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">80 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Part USD réserves</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:58%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--slate);">58 %↓</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Demande cuivre 2030</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">85 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Dollar rally :</strong> une récession mondiale ou une crise émergente renforce toujours le dollar comme valeur refuge — à court terme.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Or post-+130 % :</strong> une grande partie de la hausse est déjà réalisée. Entrée sur des minières après +130 % = timing défavorable.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Matières premières cycliques :</strong> très sensibles aux cycles économiques — volatilité élevée à court terme.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">2026 – 2027</div>
+      <div class="tl-text"><strong>Turbulences dollar</strong> · Tarifs Trump = tensions commerciales = dollar volatil · Or consolide post-rally · Cuivre soutenu par réarmement</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2027 – 2030</div>
+      <div class="tl-text"><strong>Rééquilibrage</strong> · Nouvelles émissions de monnaie numérique de banque centrale (MNBC) · Yuan progresse dans le commerce BRICS</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2030 – 2035</div>
+      <div class="tl-text"><strong>Nouveau système</strong> · Système multipolaire de réserves · Or = 10–15 % des réserves mondiales (vs 8 % en 2023) · Lithium = ressource stratégique</div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement — couverture structurelle recommandée</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Or — couverture structurelle max 5 %</div>
+      <span class="inv-tag" style="background:#fff8e1;color:#c77700;">🥇 First Eagle Amundi — or physique intégré ~10 % · approche élégante</span>
+      <span class="inv-tag" style="background:#fff8e1;color:#c77700;">⚠ EdR Goldsphere / CM-AM Gold — post +130 % · timing défavorable</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Matières premières industrielles</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🔋 Pictet Clean Energy — cuivre/lithium indirect</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">⛽ BGF Sustainable Energy — énergie/matériaux</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — TRANSITION ÉNERGÉTIQUE
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-mt">🌐 Moyen terme structurel</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Transition Énergétique & Climat</div>
+  <div class="section-sub">Un thème structurel sur 20 ans dont la trajectoire à 5 ans est complexifiée par le pragmatisme énergétique post-Ukraine, les tarifs Trump sur les équipements solaires et la réhabilitation du nucléaire. Les vrais bénéficiaires ne sont pas ceux de 2021.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t3),#66bb6a);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">⚡</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 04</div>
+      <div class="tc-title">Transition Énergétique Pragmatique</div>
+      <div class="tc-subtitle">Abandon du dogme "tout renouvelable" · Nucléaire réhabilité · Infrastructure comme vrai vecteur d'investissement</div>
+      <div class="tc-badges">
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bmed">Conviction moyenne</span>
+        <span class="badge blow">Thème 20 ans non linéaire</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t3);">7/10</div>
+      <div class="ts-sub">Volatilité politique élevée</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>La transition énergétique se réinvente après les illusions de 2021.</strong> L'Europe a découvert en 2022 que la dépendance au gaz russe était une erreur stratégique et que les renouvelables intermittents sans stockage ne suffisent pas. Le résultat : un pragmatisme énergétique qui réhabilite le gaz comme "énergie de transition" et le nucléaire comme énergie bas-carbone pilotable.</p>
+        <p><strong>Nucléaire :</strong> la France étend la durée de vie de ses réacteurs existants et prépare 14 nouveaux EPR2. La Belgique reporte sa sortie du nucléaire. La Pologne, les Pays-Bas, la Suède et la Finlande construisent ou planifient de nouveaux réacteurs. Aux États-Unis, les hyperscalers (Microsoft, Google) signent des PPAs avec des centrales nucléaires pour alimenter leurs datacenters IA en énergie pilotable. <strong>L'IA est un catalyseur inattendu du nucléaire.</strong></p>
+        <p><strong>Les vrais bénéficiaires ≠ les acteurs de 2021 :</strong> Les fabricants de panneaux solaires et d'éoliennes (surtout chinois) sont sous pression tarifaire et de marges. Les <em>opérateurs d'infrastructure régulée</em> — gestionnaires de réseaux, de centrales, de capacités de stockage — captent la vraie valeur : des revenus contractuels sur 20–30 ans, indexés à l'inflation, protégés par des barrières réglementaires.</p>
+        <p><strong>Hydrogène :</strong> le moment n'est pas encore venu. Les coûts de production restent 3–4× trop élevés vs les alternatives. Intéressant à partir de 2030–2032 si la technologie d'électrolyse mature. À surveiller, pas à allouer massivement maintenant.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Investissements réseau EU</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--t3);"></div></div>
+          <div class="signal-val" style="color:var(--t3);">85 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Réhabilitation nucléaire</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:75%;background:var(--t3);"></div></div>
+          <div class="signal-val" style="color:var(--t3);">75 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Datacenters → énergie pilotable</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:80%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">80 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Tarifs Trump solar/éolien US</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:70%;background:var(--red);"></div></div>
+          <div class="signal-val" style="color:var(--red);">−70 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Retard réglementaire :</strong> les autorisations de construction en Europe prennent 8–12 ans. Les réseaux ne s'adaptent pas assez vite à la demande IA + VE.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Prix énergie :</strong> si le gaz reste bon marché, la pression sur les énergies renouvelables persiste.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Concurrence chinoise :</strong> les panneaux et batteries chinoises inondent les marchés malgré les tarifs, comprimant les marges des acteurs occidentaux.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement — infrastructure ≫ équipements</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Infrastructure régulée (cœur)</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🏗️ Eiffel Infrastructures Vertes — dette infra · cashflows contractuels · SFDR Art. 9</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">💧 Pictet Water / BNP Aqua — utilités eau/assainissement</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Exposition thématique</div>
+      <span class="inv-tag" style="background:#fff3e0;color:#c77700;">☀️ Pictet Clean Energy — éolien/solaire — attention tarifs Trump</span>
+      <span class="inv-tag" style="background:#fff3e0;color:#c77700;">♻️ DNCA Beyond Climate / Mandarine Transition — diversifié</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — DÉMOGRAPHIE & SANTÉ
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-mt">🌐 Moyen terme — Tendances lentes</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Démographie, Longévité & Santé</div>
+  <div class="section-sub">Le vieillissement mondial est la mégatendance la plus certaine — mais aussi la plus lente. Elle remodèle les marchés de consommation, le système de santé, et pose la question de la soutenabilité des États-providence.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t6),#26c6da);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🏥</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 05</div>
+      <div class="tc-title">Longévité, Vieillissement & Révolution Santé</div>
+      <div class="tc-subtitle">GLP-1 (Ozempic) comme précédent · Drug discovery IA · Medtech · Économie des seniors</div>
+      <div class="tc-badges">
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bmed">Conviction moyenne-haute</span>
+        <span class="badge boppo">Opportunité 2027–2035</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t6);">8/10</div>
+      <div class="ts-sub">Tendance démographique irréversible</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>Le vieillissement est la seule mégatendance parfaitement prévisible.</strong> En 2035, 25 % de la population européenne aura plus de 65 ans (vs 20 % en 2024). En Chine, la démographie est encore plus sévère : contraction de la population active depuis 2022, vieillissement accéléré par l'héritage de la politique de l'enfant unique. Au Japon, des quartiers entiers sont déjà en voie de désertification.</p>
+        <p><strong>La révolution GLP-1 change tout dans la santé.</strong> Les médicaments contre l'obésité (Ozempic, Wegovy) ont prouvé qu'ils réduisent non seulement le poids mais aussi les maladies cardiovasculaires (−20 %), les maladies rénales et peut-être Alzheimer. Leur adoption de masse va créer une onde de choc sur l'industrie agroalimentaire (moins de sucre/graisses), les hôpitaux (moins de chirurgie bariatrique) et les assureurs (moins de comorbidités). C'est comparable à l'invention des statines dans les années 1990.</p>
+        <p><strong>Drug discovery par IA :</strong> AlphaFold (Google DeepMind) a prédit la structure de 200 millions de protéines en 2023. Des médicaments développés en 2–3 ans au lieu de 12–15 ans arrivent dans les pipelines. Isomorphic Labs, Recursion Pharmaceuticals et les grands labos partenaires représentent l'avant-garde d'une révolution pharmaceutique.</p>
+        <p><strong>Économie des seniors :</strong> une population âgée plus nombreuse et plus riche (héritage des baby-boomers) crée une demande massive dans les EPHAD, la silver économie, le tourisme accessible, les services de maintien à domicile, la prévoyance et l'assurance dépendance.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Adoption GLP-1 mondiale</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:40%;background:var(--t6);"></div></div>
+          <div class="signal-val" style="color:var(--t6);">40 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Dépenses santé /PIB EU</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">10 %↑</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Pipelines drug discovery IA</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:55%;background:var(--t6);"></div></div>
+          <div class="signal-val" style="color:var(--t6);">55 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Part 65+ Europe 2035</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:25%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">25 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Pression des prix :</strong> les gouvernements négocient agressivement les prix des médicaments — Ozempic vendu 10× moins cher en Europe qu'aux US.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Financement États-providence :</strong> moins d'actifs pour financer plus de retraités — pression fiscale, dette souveraine.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Biotech = volatilité :</strong> un échec clinique en phase 3 peut effacer 50–80 % d'une capitalisation boursière en une journée.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Exposition ciblée</div>
+      <span class="inv-tag" style="background:#e0f2f1;color:#00695c;">💊 Pictet Biotech HP EUR — drug discovery, GLP-1 adjacent</span>
+      <span class="inv-tag" style="background:#e0f2f1;color:#00695c;">🏥 JPMF Global Healthcare — secteur santé diversifié</span>
+      <span class="inv-tag" style="background:#e0f2f1;color:#00695c;">👴 CPR Silver Age — économie des seniors Europe</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Exposition indirecte</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🔬 Arc Actions Santé Innovante — small caps santé France</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🌐 Fonds monde diversifiés — large pharma (Roche, Novartis, Novo)</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — GÉOPOLITIQUE & RESHORING
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-both">⚡🌐 Court + Moyen terme</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Fragmentation Géopolitique & Reshoring</div>
+  <div class="section-sub">La mondialisation ne se renverse pas — elle se segmente. Les chaînes d'approvisionnement se relocalisent par zones géopolitiques, pas par proximité géographique. C'est le thème le moins linéaire mais dont l'impact sur les valorisations est déjà réel.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t7),#ff7043);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🏭</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 06</div>
+      <div class="tc-title">Fragmentation du Commerce Mondial & Reshoring</div>
+      <div class="tc-subtitle">Chaînes de valeur réorganisées par blocs · Tarifs Trump · Nearshoring Europe · Inde comme alternative à la Chine</div>
+      <div class="tc-badges">
+        <span class="badge bct">Court terme</span>
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bmed">Conviction moyenne</span>
+        <span class="badge blow">Scénarios multiples</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t7);">7/10</div>
+      <div class="ts-sub">Dépend des négociations</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>Les tarifs Trump (2025–2026) ne sont pas une politique commerciale — ils sont une arme géopolitique.</strong> L'objectif déclaré est de forcer le reshoring industriel américain et de découpler les économies occidentales de la Chine. L'impact immédiat sur les marchés est une compression des marges des exportateurs (notamment européens et asiatiques) et une accélération des relocalisations.</p>
+        <p><strong>Le nearshoring européen :</strong> les entreprises européennes relocalisent vers des "pays amis" (Morocco, Turquie, Roumanie, Pologne, Inde) plutôt que vers la Chine. Cela crée une demande en immobilier logistique, infrastructure de transport, énergie locale, et main-d'œuvre qualifiée dans ces zones.</p>
+        <p><strong>L'Inde comme grande gagnante :</strong> 1,4 milliard d'habitants, classe moyenne en expansion, infrastructure en construction massive, gouvernement pro-business, démocratie stable. Apple fabrique déjà 15 % de ses iPhones en Inde (vs 5 % en 2022). L'Inde vise 1 000 Md$ d'exportations manufacturières d'ici 2030.</p>
+        <p><strong>La Chine n'est pas morte :</strong> elle garde un avantage compétitif dans les batteries (CATL), les panneaux solaires, les véhicules électriques et la chimie fine. Mais son accès aux marchés occidentaux se rétrécit — ce qui la pousse vers l'Afrique, le Moyen-Orient et l'ASEAN.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Tarifs Trump actifs</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:90%;background:var(--t7);"></div></div>
+          <div class="signal-val" style="color:var(--t7);">Réel</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Nearshoring EU en cours</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:55%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">55 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Part Inde dans exports monde</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:35%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">↑3,5 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Risque de récession US</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:45%;background:var(--red);"></div></div>
+          <div class="signal-val" style="color:var(--red);">45 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Récession US :</strong> les tarifs peuvent déclencher un ralentissement économique américain qui contaminerait l'Europe via la demande et la confiance.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Escalade :</strong> une guerre commerciale totale USA/Chine serait déflationniste à court terme et inflationniste à moyen terme — combinaison difficile à gérer.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Coûts de transition :</strong> le reshoring coûte cher — marges sous pression pendant 3–5 ans avant que les gains de souveraineté se matérialisent.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Bénéficiaires directs</div>
+      <span class="inv-tag" style="background:#fff3e0;color:#e65100;">🇮🇳 Fidelity India Focus — exposition Inde pure play</span>
+      <span class="inv-tag" style="background:#fff3e0;color:#e65100;">🏭 Eurazeo PE — PME réindustrialisation européenne</span>
+      <span class="inv-tag" style="background:#fff3e0;color:#e65100;">🛡️ M&G Strategic Value — value EU réindustrialisée</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Éviter / Prudence</div>
+      <span class="inv-tag" style="background:#fce4ec;color:#c0392b;">⚠ Exportateurs EU vers US — impact tarifs direct</span>
+      <span class="inv-tag" style="background:#fce4ec;color:#c0392b;">⚠ Fonds Chine purs — risque géopolitique autonome</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 6 — CRÉDIT PRIVÉ & PE
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-mt">🌐 Moyen terme · Alternatif</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Démocratisation du Capital Privé</div>
+  <div class="section-sub">Le Private Equity et le crédit privé, autrefois réservés aux institutionnels, s'ouvrent aux particuliers via les contrats d'assurance-vie. C'est un avantage compétitif réel pour Cristalliance Avenir — et une source de prime de rendement structurelle sur horizon 10 ans.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t4),#ab47bc);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🏦</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 07</div>
+      <div class="tc-title">Démocratisation du Capital Privé</div>
+      <div class="tc-subtitle">Private Equity · Credit Privé · Infrastructure · Accès via assurance-vie · Prime d'illiquidité structurelle</div>
+      <div class="tc-badges">
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bhigh">Conviction haute</span>
+        <span class="badge boppo">Avantage Cristalliance</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t4);">8/10</div>
+      <div class="ts-sub">Structurel sur 10 ans</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>La prime de Private Equity sur les marchés cotés est documentée et durable.</strong> Sur 20 ans, le PE a surperformé le MSCI World d'environ 3–5 % par an net de frais. Cette prime est une compensation pour l'illiquidité — pas de liquidité quotidienne, pas de mark-to-market quotidien, engagement de capital long terme. Sur un horizon de 10 ans avec arbitrages possibles, c'est une prime que l'investisseur peut capter.</p>
+        <p><strong>Le crédit privé est la classe d'actifs qui a le plus bénéficié de la hausse des taux.</strong> Avec des spreads de 400–600 points de base au-dessus du taux sans risque, les fonds de dette privée senior secured offrent des rendements de 7–10 % avec une protection en capital bien supérieure aux obligations cotées à notation équivalente. Les banques se retirent du financement des PME (contraintes réglementaires bâloises) — les gérants de crédit privé comblent ce vide.</p>
+        <p><strong>L'infrastructure régulée</strong> (énergies renouvelables, réseaux, data centers) offre des cash-flows contractuels indexés à l'inflation sur 20–30 ans. C'est le meilleur substitut aux obligations souveraines dans un monde de taux normalisés à 2–3 %.</p>
+        <p><strong>Le grand changement :</strong> des réglementations type ELTIF 2.0 (European Long-Term Investment Fund) permettent depuis 2024 d'investir dans le PE et le crédit privé via des FCPR en assurance-vie avec des seuils d'entrée beaucoup plus bas. Cristalliance Avenir propose déjà Eurazeo PE 3 et Eiffel Infra Vertes — c'est rare et différenciant.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Prime PE vs coté (20a)</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:80%;background:var(--t4);"></div></div>
+          <div class="signal-val" style="color:var(--t4);">+4 %/an</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Rendement crédit privé</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--t4);"></div></div>
+          <div class="signal-val" style="color:var(--t4);">8–10 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">ELTIF 2.0 accès particulier</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:40%;background:var(--amber);"></div></div>
+          <div class="signal-val" style="color:var(--amber);">Nascent</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Retrait banques financement PME</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:70%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">70 %</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Illiquidité :</strong> en cas de besoin urgent de cash, pas de sortie rapide — horizon 5 ans minimum incompressible.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Opacité des valorisations :</strong> valorisation trimestrielle = le client ne voit pas la volatilité réelle (avantage psychologique mais information incomplète).</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Frais élevés :</strong> 2–3 % de frais de gestion + carried interest réduisent significativement le rendement net.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Disponible dans Cristalliance Avenir — avantage concurrentiel rare</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Actifs disponibles</div>
+      <span class="inv-tag" style="background:#f3e5f5;color:#6a1b9a;">🏢 Eurazeo Private Value Europe 3 — PE PME/ETI EU · 1,5 Md€ · meilleure liquidité FCPR</span>
+      <span class="inv-tag" style="background:#f3e5f5;color:#6a1b9a;">🌿 Eiffel Infrastructures Vertes — dette infra verte · SFDR Art. 9 · cashflows contractuels</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ À investiguer dans l'univers</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">📊 FCPR Apeo (Seven2) — PE diversifié · 548 M€ · en alternative à Eurazeo</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🛡️ Bpifrance Défense — PE défense souverain · à qualifier (17 M€ trop petit)</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7 — SPATIAL & SOUVERAINETÉ NUMÉRIQUE
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+<div class="section-intro">
+  <div class="hz-label hz-mt">🌐 Moyen terme · Satellite</div>
+  <div class="gold-rule"></div>
+  <div class="section-title">Espace, Souveraineté Numérique & Cybersécurité</div>
+  <div class="section-sub">Trois thèmes satellites qui ne méritent pas une allocation cœur mais dont la dynamique à 5–10 ans est réelle. À positionner en tant que compléments tactiques, pas comme fondations de portefeuille.</div>
+</div>
+
+<div class="trend-card">
+  <div class="tc-accent" style="background:linear-gradient(90deg,var(--t8),#607d8b);"></div>
+  <div class="tc-header">
+    <div class="tc-icon">🛸</div>
+    <div class="tc-title-block">
+      <div class="tc-number">MÉGATENDANCE 08</div>
+      <div class="tc-title">New Space, Cybersécurité & Souveraineté Numérique</div>
+      <div class="tc-subtitle">Programme IRIS² · Constellation de satellites · Explosion de la surface d'attaque cyber · Cloud souverain européen</div>
+      <div class="tc-badges">
+        <span class="badge bmt">Moyen terme</span>
+        <span class="badge bmed">Conviction moyenne</span>
+        <span class="badge blow">Thème satellite — 2–5 % max</span>
+      </div>
+    </div>
+    <div class="tc-score">
+      <div class="ts-label">Conviction</div>
+      <div class="ts-val" style="color:var(--t8);">6/10</div>
+      <div class="ts-sub">Thème réel, timing incertain</div>
+    </div>
+  </div>
+
+  <div class="tc-body">
+    <div class="tc-left">
+      <div class="tc-section-lbl">Analyse factuelle</div>
+      <div class="tc-text">
+        <p><strong>Le spatial n'est plus la chasse gardée des États.</strong> SpaceX a révolutionné le lancement avec des fusées réutilisables (coût ÷10). L'Europe répond avec le programme IRIS² (Infrastructure for Resilience, Interconnectivity and Security by Satellite) — une constellation de 290 satellites prévus pour 2030–2032 pour assurer la connectivité souveraine de l'UE. Les fournisseurs : Airbus, Thales, Leonardo, SES. Ce programme est valorisable dans les fonds défense/industrie EU déjà sélectionnés.</p>
+        <p><strong>La cybersécurité est la face sombre de la digitalisation.</strong> Chaque ransomware, chaque IA déployée, chaque objet connecté élargit la surface d'attaque. Le marché mondial de la cybersécurité passera de 200 Md$ (2024) à 500 Md$ (2030). La demande est portée par les réglementations (NIS2 en Europe, SEC aux US), par le réarmement (la guerre en Ukraine a démontré que le cyber est un front de guerre à part entière) et par l'IA (les attaques IA nécessitent des défenses IA).</p>
+        <p><strong>Souveraineté numérique :</strong> l'Europe veut sortir de sa dépendance aux GAFAM pour ses données souveraines. Le Cloud souverain (OVHcloud, Thales avec S3NS) et le RGPD sont des catalyseurs de demande locale pour des services cloud certifiés.</p>
+      </div>
+    </div>
+    <div class="tc-right">
+      <div class="tc-section-lbl">Signaux</div>
+      <div class="signal-grid">
+        <div class="signal-item">
+          <div class="signal-label">Budget IRIS² alloué</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:70%;background:var(--t8);"></div></div>
+          <div class="signal-val" style="color:var(--t8);">70 %</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">Croissance marché cyber</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:80%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">+15 %/an</div>
+        </div>
+        <div class="signal-item">
+          <div class="signal-label">NIS2 en vigueur EU</div>
+          <div class="signal-bar-wrap"><div class="signal-bar" style="width:85%;background:var(--green);"></div></div>
+          <div class="signal-val" style="color:var(--green);">Réel</div>
+        </div>
+      </div>
+      <div class="tc-section-lbl" style="margin-top:16px;">Risques</div>
+      <div class="risk-list">
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Délais IRIS² :</strong> les grands programmes spatiaux européens ont une longue histoire de retards et dépassements de coûts.</div></div>
+        <div class="risk-item"><span class="risk-icon">⚠</span><div><strong>Concentration cyber US :</strong> Palo Alto, CrowdStrike, Microsoft Security dominent le marché mondial — peu d'acteurs purs européens cotés.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-invest">
+    <div class="inv-title">Angles d'investissement — position satellite uniquement (2–3 % max)</div>
+    <div class="inv-col">
+      <div class="inv-col-title">✓ Accès disponible</div>
+      <span class="inv-tag" style="background:#eceff1;color:#37474f;">🛸 Echiquier Space B — spatial/défense tech (DS5 n/d, Sharpe 3a 1,62)</span>
+      <span class="inv-tag" style="background:#eceff1;color:#37474f;">🔒 Via fonds tech globaux (Fidelity, EdR Big Data) — cyber intégré</span>
+    </div>
+    <div class="inv-col">
+      <div class="inv-col-title">◎ Indirect via défense</div>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🛡️ M&G Strategic Value — Thales, Airbus indirect</span>
+      <span class="inv-tag" style="background:#e8f5e9;color:#2d6a4f;">🇪🇺 JPMF Europe Sust. — Rolls-Royce, Leonardo</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MATRICE DE CONVICTION
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+  <div class="section-intro">
+    <div class="gold-rule"></div>
+    <div class="section-title">Matrice de Conviction — Synthèse</div>
+    <div class="section-sub">Récapitulatif des 8 mégatendances avec leur horizon, leur conviction et leur implication pour l'allocation du profil équilibré/dynamique Cristalliance Avenir.</div>
+  </div>
+
+  <div style="border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 2px 8px rgba(13,27,42,0.05);">
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th style="width:240px;">Mégatendance</th>
+        <th>Horizon</th>
+        <th>Conviction</th>
+        <th>Impact court terme</th>
+        <th>Impact moyen terme</th>
+        <th>Allocation suggérée</th>
+        <th>Principal risque</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>🧠 IA — 2ème vague applicative</strong></td>
+        <td><span class="horiz-both2">Court + Moyen</span></td>
+        <td><span class="conv-badge conv-h">9/10</span></td>
+        <td style="font-size:11px;">Volatilité tech US · DnCapt risque</td>
+        <td style="font-size:11px;">Gains productivité →  PIB +1–2 %/an</td>
+        <td style="font-size:11px;font-weight:600;">5–7 % · Fidelity GT + EdR Big Data</td>
+        <td style="font-size:11px;color:var(--red);">Tarifs Trump CT · Bulle applicative</td>
+      </tr>
+      <tr>
+        <td><strong>🛡️ Réarmement EU & réindustrialisation</strong></td>
+        <td><span class="horiz-both2">Court + Moyen</span></td>
+        <td><span class="conv-badge conv-h">10/10</span></td>
+        <td style="font-size:11px;">Carnets de commandes records · M&A défense</td>
+        <td style="font-size:11px;">Autonomie stratégique EU · Révolution industrielle</td>
+        <td style="font-size:11px;font-weight:600;">15–18 % · M&G + Groupama Opp. Europe + CPR EU Auto.</td>
+        <td style="font-size:11px;color:var(--red);">Valorisations déjà élevées</td>
+      </tr>
+      <tr>
+        <td><strong>⚡ Transition énergétique pragmatique</strong></td>
+        <td><span class="horiz-long">Moyen terme</span></td>
+        <td><span class="conv-badge conv-m">7/10</span></td>
+        <td style="font-size:11px;">Nucléaire réhabilité · Infra régulée solide</td>
+        <td style="font-size:11px;">800 Md€/an investissements réseau EU</td>
+        <td style="font-size:11px;font-weight:600;">3–5 % · Eiffel Infra + Pictet Water</td>
+        <td style="font-size:11px;color:var(--red);">Retards réglementaires · Concurrence Chine</td>
+      </tr>
+      <tr>
+        <td><strong>🪙 Dédollarisation & Or structurel</strong></td>
+        <td><span class="horiz-both2">Court + Moyen</span></td>
+        <td><span class="conv-badge conv-m">7/10</span></td>
+        <td style="font-size:11px;">Or consolide post-+130 % · Dollar sous pression</td>
+        <td style="font-size:11px;">Système multipolaire réserves · Cuivre rare</td>
+        <td style="font-size:11px;font-weight:600;">~5 % (via First Eagle) · pas de mine directe</td>
+        <td style="font-size:11px;color:var(--red);">Rally dollar en récession</td>
+      </tr>
+      <tr>
+        <td><strong>🏥 Longévité & Révolution santé</strong></td>
+        <td><span class="horiz-long">Moyen terme</span></td>
+        <td><span class="conv-badge conv-h">8/10</span></td>
+        <td style="font-size:11px;">GLP-1 adoption — disruption agroalimentaire</td>
+        <td style="font-size:11px;">Drug discovery IA · Économie des seniors</td>
+        <td style="font-size:11px;font-weight:600;">2–4 % satellite · Pictet Biotech + JPM HC</td>
+        <td style="font-size:11px;color:var(--red);">Pression prix médicaments · Volatilité biotech</td>
+      </tr>
+      <tr>
+        <td><strong>🏭 Reshoring & Fragmentation géopolitique</strong></td>
+        <td><span class="horiz-both2">Court + Moyen</span></td>
+        <td><span class="conv-badge conv-m">7/10</span></td>
+        <td style="font-size:11px;">Tarifs Trump → compression marges export EU</td>
+        <td style="font-size:11px;">Inde = 3ème économie mondiale 2030</td>
+        <td style="font-size:11px;font-weight:600;">Via Eurazeo PE + Inde en VP</td>
+        <td style="font-size:11px;color:var(--red);">Récession US · escalade guerre commerciale</td>
+      </tr>
+      <tr>
+        <td><strong>🏦 Démocratisation capital privé</strong></td>
+        <td><span class="horiz-long">Moyen terme</span></td>
+        <td><span class="conv-badge conv-h">8/10</span></td>
+        <td style="font-size:11px;">Rendement crédit privé 8–10 % · ELTIF 2.0</td>
+        <td style="font-size:11px;">Prime illiquidité structurelle +3–5 %/an</td>
+        <td style="font-size:11px;font-weight:600;">5 % · Eurazeo PE 3 + Eiffel Infra</td>
+        <td style="font-size:11px;color:var(--red);">Illiquidité · frais élevés</td>
+      </tr>
+      <tr>
+        <td><strong>🛸 New Space, Cyber, Souveraineté</strong></td>
+        <td><span class="horiz-long">Moyen terme</span></td>
+        <td><span class="conv-badge conv-l">6/10</span></td>
+        <td style="font-size:11px;">NIS2 en vigueur · IRIS² commandes</td>
+        <td style="font-size:11px;">Constellation 290 satellites EU 2030–2032</td>
+        <td style="font-size:11px;font-weight:600;">2 % satellite · Echiquier Space</td>
+        <td style="font-size:11px;color:var(--red);">Délais · concentration US en cyber</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     RISQUES MACRO GLOBAUX
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+  <div class="section-intro">
+    <div class="gold-rule"></div>
+    <div class="section-title">Risques Macro Transversaux</div>
+    <div class="section-sub">Les risques qui peuvent remettre en cause toutes les thèses simultanément — les "unknown unknowns" et les événements à faible probabilité mais fort impact.</div>
+  </div>
+
+  <div class="risk-radar">
+    <div class="rr-title">Radar des risques systémiques 2026–2028</div>
+    <div class="rr-grid">
+      <div class="rr-item">
+        <div class="rr-level rrl-h">ÉLEVÉ</div>
+        <div class="rr-item-title">Escalade tarifaire US → récession mondiale</div>
+        <div class="rr-item-body">Les tarifs Trump 2026 sont de nature à provoquer une contraction du commerce mondial de 10–15 %. Une récession US contaminerait rapidement l'Europe via les exportations et la confiance. Probabilité estimée : 35–45 %.</div>
+      </div>
+      <div class="rr-item">
+        <div class="rr-level rrl-h">ÉLEVÉ</div>
+        <div class="rr-item-title">Escalade militaire Moyen-Orient</div>
+        <div class="rr-item-body">Un conflit Iran / Israël généralisé bloquerait le détroit d'Ormuz (30 % du pétrole mondial). Choc pétrolier → inflation → récession stagflationniste. Probabilité : 20–30 % sur 2 ans.</div>
+      </div>
+      <div class="rr-item">
+        <div class="rr-level rrl-m">MODÉRÉ</div>
+        <div class="rr-item-title">Crise de dette souveraine EU</div>
+        <div class="rr-item-body">Le réarmement finance par endettement dans des pays déjà très endettés (France, Italie). Un "moment Liz Truss" européen sur les spreads OAT/Bund ou BTP/Bund est possible si les marchés perdent confiance. Probabilité : 15–20 % sur 5 ans.</div>
+      </div>
+      <div class="rr-item">
+        <div class="rr-level rrl-m">MODÉRÉ</div>
+        <div class="rr-item-title">Bulle IA — correction violente</div>
+        <div class="rr-item-body">Les valorisations des acteurs IA intègrent des décennies de croissance. Un ralentissement de l'adoption ou un grand modèle open source qui détruirait la valeur commerciale des modèles propriétaires pourrait déclencher une correction −40 à −60 % sur les valeurs IA.</div>
+      </div>
+      <div class="rr-item">
+        <div class="rr-level rrl-m">MODÉRÉ</div>
+        <div class="rr-item-title">Crise bancaire émergents</div>
+        <div class="rr-item-body">La hausse du dollar et la contraction du commerce mondial fragilisent les économies émergentes endettées en dollars. Une crise type 1997–1998 ne peut être exclue — contagion possible via les fonds HY émergents (IVO 2028).</div>
+      </div>
+      <div class="rr-item">
+        <div class="rr-level rrl-l">FAIBLE</div>
+        <div class="rr-item-title">Pandémie ou choc climatique extrême</div>
+        <div class="rr-item-body">Les événements à faible probabilité mais très fort impact. La pandémie COVID a effacé 34 % des marchés mondiaux en 33 jours (2020). Un événement climatique extrême (sécheresse, inondations massives simultanées) perturberait les chaînes alimentaires.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     IMPLICATIONS PORTEFEUILLE
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="section">
+  <div class="section-intro">
+    <div class="gold-rule"></div>
+    <div class="section-title">Implications Portefeuille — Cristalliance Avenir</div>
+    <div class="section-sub">Comment ces mégatendances se traduisent concrètement dans la construction du portefeuille équilibré/dynamique avec horizon &gt; 10 ans.</div>
+  </div>
+
+  <div class="impl-grid">
+    <div class="impl-card">
+      <div class="impl-icon">🏗️</div>
+      <div class="impl-title">Socle défensif inchangé</div>
+      <div class="impl-body">Fonds euro 20 % + Exceltis 35 % = <strong>55 % de capital ancré</strong> hors volatilité marchés. Dans un environnement de mégatendances incertaines, ce socle permet de prendre des risques mesurés sur les 45 % UC restants sans mettre en péril le capital global.</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🛡️</div>
+      <div class="impl-title">Réarmement EU = poche actions cœur</div>
+      <div class="impl-body"><strong>15–18 % en actions Europe</strong> avec biais value/industriel. C'est le thème à conviction 10/10 avec le meilleur rapport certitude/rendement. M&G Strategic Value + Groupama Opportunities Europe couvrent le deep value cyclique (M&G : acier, banques, utilities) et la qualité défensive européenne (Groupama : Pharma, Défense, Semis).</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🧠</div>
+      <div class="impl-title">IA = poche de croissance ciblée</div>
+      <div class="impl-body"><strong>5–7 % en tech/disruption mondiale</strong>. Fidelity Global Tech (distribution quasi-normale, Sharpe 8a 0,90) est préféré pour sa qualité de distribution. Groupama Disruption en alternative si conviction "deuxième vague applicative large". VP majoritaire sur 18–24 mois.</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🔒</div>
+      <div class="impl-title">Alternatives = amortisseurs systémiques</div>
+      <div class="impl-body"><strong>10 % en alternatives décorrélées</strong> (Hélium + JPM Alpha). Ces fonds sont les seuls qui montent quand les marchés baissent — indispensables dans un environnement de risques systémiques multiples (tarifs, crise bancaire, escalade géopolitique).</div>
+    </div>
+  </div>
+
+  <div class="impl-grid" style="margin-top:14px;">
+    <div class="impl-card">
+      <div class="impl-icon">📅</div>
+      <div class="impl-title">Fonds datés = portage certaine</div>
+      <div class="impl-body"><strong>8 % en datés 2028–2031</strong>. Dans un monde incertain, un rendement actuariel de 4,5–7,8 % quasi-garanti (hors défaut) est précieux. IVO 2028 (HY émergents, carry résiduel élevé) + Carmignac/Sextant 2031 (crédit EU, portage 5 ans).</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🌿</div>
+      <div class="impl-title">Infra/PE = prime illiquidité structurelle</div>
+      <div class="impl-body"><strong>5 % en capital privé</strong>. Eiffel (dette infra contractuelle, Art. 9, transition énergétique) + Eurazeo PE (PME EU, prime PE long terme). Sur 10 ans, cette prime d'illiquidité représente 3–5 % de rendement supplémentaire annualisé.</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🪙</div>
+      <div class="impl-title">Or = intégré, non surpondéré</div>
+      <div class="impl-body">La couverture or passe par <strong>First Eagle Amundi (~10 % or physique intégré)</strong> — pas par des fonds miniers après +130 %. C'est la façon la plus élégante d'avoir une exposition or structurelle sans timing sur le prix spot.</div>
+    </div>
+    <div class="impl-card">
+      <div class="impl-icon">🇮🇳</div>
+      <div class="impl-title">Inde = prochain satellite à intégrer</div>
+      <div class="impl-body"><strong>Absent de la sélection actuelle</strong> — c'est le seul grand manque. Fidelity India Focus (3 étoiles Quantalys, 277 M€) ou FF India Focus en VP sur 18 mois à 2–3 % du portefeuille permettrait de capter la 3ème économie mondiale d'ici 2030.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CONCLUSION
+══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="conclusion">
+  <div class="cc-title">Synthèse — Le portefeuille des mégatendances</div>
+  <div class="cc-body">
+    L'analyse des 8 mégatendances converge vers une conclusion structurante : <strong>l'Europe est en meilleure position relative en 2026 qu'elle ne l'a été depuis 20 ans</strong> — pas par mérite absolu, mais par contraste avec les risques américains (tarifs, valorisations tendues, polarisation politique) et asiatiques (démographie, tensions géopolitiques). Le réarmement et la réindustrialisation créent des carnets de commandes pluriannuels dans des secteurs value qui étaient sous-évalués. L'IA, en revanche, est un thème où la sélectivité est cruciale : la deuxième vague est réelle mais les excès de valorisation de la première vague (mega-caps US) constituent un risque à court terme.<br><br>
+    Le portefeuille Cristalliance Avenir, tel qu'il est construit autour des Exceltis (35 %), du fonds euro (20 %) et des UC sélectionnées, est <strong>structurellement aligné avec les mégatendances dominantes</strong> : réarmement EU (M&G, JPMF), IA sélective (Fidelity GT), infra verte (Eiffel), PE long terme (Eurazeo), alternatives décorrélées pour traverser les risques systémiques.
+  </div>
+  <div class="cc-points">
+    <div class="cc-point">
+      <div class="cc-point-title">Thème #1 — Réarmement EU</div>
+      <div class="cc-point-body">Conviction 10/10 · 10 ans de carnets de commandes · Catalyseur macro irréversible · M&G + Groupama Opp. Europe = exposition cœur validée</div>
+    </div>
+    <div class="cc-point">
+      <div class="cc-point-title">Thème #2 — IA Deuxième Vague</div>
+      <div class="cc-point-body">Fidelity Global Tech > Groupama Disruption sur distribution SK/KU · VP 18–24 mois · Attendre la digestion du choc tarifaire Trump avant de renforcer</div>
+    </div>
+    <div class="cc-point">
+      <div class="cc-point-title">Manque identifié — Inde</div>
+      <div class="cc-point-body">Seul grand émergent à conviction sur 10 ans · Ajouter 2–3 % en VP progressif · Fidelity India Focus ou FF India Focus disponibles dans l'univers</div>
+    </div>
+    <div class="cc-point">
+      <div class="cc-point-title">Risque à surveiller #1</div>
+      <div class="cc-point-body">Récession US liée aux tarifs Trump (probabilité 35–45 %) · Le socle défensif 55 % (Exceltis + fonds euro) est le premier rempart · Réserve tactique fonds euro = arme de réallocation</div>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <strong>Avertissement professionnel MIF II :</strong> Ce document est une analyse de mégatendances à usage du conseiller en gestion de patrimoine. Il ne constitue pas un conseil en investissement au sens du Code monétaire et financier. Les scénarios macro-économiques décrits sont des opinions fondées sur des informations disponibles en avril 2026 — ils ne constituent pas des prévisions garanties. Les performances passées des fonds cités ne préjugent pas des performances futures. Les convictions chiffrées (X/10) sont des évaluations qualitatives, non des probabilités mathématiques. L'allocation suggérée doit être adaptée à la situation personnelle de chaque client (profil MIF II, horizon, fiscalité). Sources : données macro publiques (BCE, FMI, Banque Mondiale), rapports sectoriels (IISS pour la défense, AIE pour l'énergie, McKinsey Global Institute pour l'IA), données Quantalys export 08/04/2026.
+</div>
+</div>
+
+<div class="ftr">Cristalliance Avenir · <em>Analyse Mégatendances 2026–2035</em> · Claude Sonnet 4.6 · Anthropic · Avril 2026</div>
+
+</body>
+</html>
